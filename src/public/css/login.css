@@ -1,0 +1,157 @@
+.contact-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    /*max-width: 1230px;*/
+    max-width: 1500px;
+
+    background: #e0e7e9;
+    /*margin-bottom: 300px;*/
+    /*height: auto;*/
+    height: 750px;
+}
+
+.contact-form__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.form__group {
+    /*display: flex;*/
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.form__label--required {
+    margin-left: 5px;
+    padding: 4px 6px;
+    border-radius: 3px;
+    background: #fafafa;
+    color: #aaa;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+    padding: 10px;
+    width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    appearance: none;
+}
+
+.form__input--text input {
+    height: 40px;
+}
+
+.form__input--textarea textarea {
+    height: 180px;
+}
+
+.form__button {
+    margin-top: 30px;
+}
+
+.button__size {
+    width: 1000px;
+    height: 50px;
+}
+
+
+.form__button-submit {
+
+    padding: 10px;
+    /*width: 73%;*/
+    width: 620px;
+    height: 60px;
+    border: none;
+    border-radius: 3px;
+    background: #1b55d3;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+
+.text__form {
+    margin: 0 auto;
+    /*width: 70%;*/
+    text-align: center;
+}
+
+.a__under {
+    text-decoration: none;
+    /*font-size: 1vw;*/
+    color: #1b55d3;
+}
+
+
+.under__text {
+    margin-top: 30px;
+
+}
+
+
+
+
+.news {
+    position: relative;
+}
+
+.p-news__style {
+    font-family: 'Gorditas', cursive;
+    color: blueviolet;
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+.news__absolute {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.page-top__size {
+    height: 340px;
+    width: 100%;
+    display: block;
+}
+
+.nav__size {
+    height: 100%;
+}
+
+.news__margin {
+    margin: 1vh 0 1vh 0;
+    border-bottom: 1px solid;
+    padding: 0.4vh 0 1.5vh 0;
+}
+
+.h3_news__margin {
+    margin-bottom: 1.5vh;
+}
+
+.news-page__size {
+    height: 330px;
+    width: 100%;
+    display: block;
+    background-color: white;
+}
+
+.ul__line {
+    border-top: 1px double;
+    border-bottom: 1px double;
+    padding: 20px 0 20px 0;
+    margin: 0 0 0 0;
+}
