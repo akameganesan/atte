@@ -1,0 +1,178 @@
+/*.header {
+    background: #000;
+}
+*/
+
+/*
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+*/
+
+.header-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*
+.header__logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+*/
+
+.header-utilities nav {
+    width: 18%;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav__link {
+    color: #050505;
+    text-decoration: none;
+}
+
+.header-nav__button {
+    border: none;
+    background: transparent;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.header {
+    /*background: #ffffff;*/
+    background-color: #ffffff;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+
+.header__logo {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.headr__flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo__postion {
+    color: #000000;
+}
+
+
+
+
+.header-page {
+    position: relative;
+    max-width: 1500px;
+}
+
+.header-page__size {
+    height: 50px;
+    width: 100%;
+    display: block;
+    background-color: rgb(255, 255, 255);
+}
+
+.header-content__size {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+}
+
+.header__between {
+    position: relative;
+    top: -2vh;
+    display: flex;
+    height: 60px;
+
+
+    /*align-items: center;*/
+    /*margin-left: 50px;*/
+
+
+
+    /*flex-direction: row-reverse;*/
+    left: 1300px;
+
+
+
+
+
+    margin: 0 10px 0 10px;
+}
+
+.p__margin {
+    margin-right: 100px;
+
+}
+
+
+.img__img {
+    width: 100%;
+}
+
+
+.relative__img {
+    position: relative;
+    margin: 0 0 0 0;
+    display: block;
+    width: 10vw;
+}
+
+.nav__nav {
+    margin-right: auto;
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+
+
+
+.ul__ul {
+    list-style: none;
+    display: flex;
+    /*height: 60px;*/
+    height: 50px;
+
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.li__li {
+    margin-right: 30px;
+    padding: 30px;
+    /*font-weight: bolder;*/
+    font-size: 10px;
+    color: #000000;
+}
+
+
+.a__under {
+    text-decoration: none;
+    font-size: 10;
+    color: #000000;
+}
+
+
+.h2__move {
+    margin-left: 500px;
+}
