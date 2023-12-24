@@ -7,12 +7,15 @@
 @section('content')
 
       <p class="p__mini-size">{{$a}}</p>
+      <p class="p__mini-size">{{$c}}</p>
       
 <?php
 
 
           //
           $b = $a;
+          $d = $c;
+
           //echo $b;
           //echo $b;
           //echo $b;
@@ -23,8 +26,35 @@
 
 ?>
 
+@if ($c === 5)
 
+<div class="contact-form__content">
+  <div class="contact-form__heading">
+    <h2><?php $user = Auth::user();?>{{ $user->name }}さんお疲れ様です！</h2>
+  </div>
 
+   <form class="form" action="/attendance/end" method="post">
+    @csrf
+    <div class="flex__button">
+      <div class="form__button">
+
+        <!--<button class="form__button-submit" type="submit">勤務開始</button>-->
+        <button disabled class="form__button-submit-2" type="submit" name="button1" value="ボタン1">勤務開始</button>
+
+      </div>
+
+      <div class="form__button">
+
+        <!--<button disabled class="form__button-submit-2" type="submit">勤務終了</button>-->
+        <!--<button class="form__button-submit" type="submit">勤務終了</button>-->
+        <button disabled class="form__button-submit-2" type="submit" name="button2" value="ボタン2" >勤務終了</button>
+
+      </div>
+    </div>
+
+   
+  </form>
+  @elseif ($c === 1)
 
 <div class="contact-form__content">
   <div class="contact-form__heading">
@@ -52,6 +82,7 @@
 
    
   </form>
+  @endif
 
 
 @if ($b === 1)

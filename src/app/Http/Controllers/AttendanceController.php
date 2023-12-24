@@ -8,6 +8,7 @@ use App\Models\attendances;
 use App\Models\users;
 use App\Models\User;
 use Carbon\Carbon;
+use App\Models\rests;
 
 
 class AttendanceController extends Controller
@@ -28,6 +29,11 @@ class AttendanceController extends Controller
         
         
         $user = Auth::user();
+
+        $c = 5;
+        
+        
+        
         //$user = Auth::user();
 
         ///$use = $user->id;
@@ -44,13 +50,14 @@ class AttendanceController extends Controller
         //'today' => Carbon::today(),
         'day' => Carbon::today(),
         'start_time' => Carbon::now(),
-        'end_time' => Carbon::now(),
+        //'end_time' => Carbon::now(),
+        'end_time' => null,
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now()
 
         ]);
         
-        return view('index2');
+        return view('index2')->with('c', $c);;
     }
 
      public function indexstart(Request $request){
@@ -121,32 +128,134 @@ class AttendanceController extends Controller
             }*/
 
 
-        
+            
 
 
 
             if ($request->has('button2')) {
+
             $user = Auth::user();
-        $timestamp = attendances::where('user_id', $user->id)->latest()->first();       
-        $timestamp->update([
-            'end_time' => Carbon::now()
+            //$val = attendances::with('attendances')->latest()->first();
+            //$bil = $val->id;
+   
+         $timestamp = attendances::create([
+        'users_id' => $user->id,//Auth::id(),
+        //'today' => Carbon::today(),
+        'day' => Carbon::today(),
+        //'start_time' => Carbon::now(),
+        'start_time' => null,
+        'end_time' => Carbon::now(),
+        //'end_time' => null,
+        'created_at' => Carbon::now(),
+        'updated_at' => Carbon::now()
+
         ]);
-            return view('index');
-        }
+        return view('index');
+           }         
         elseif ($request->has('button3')) {
+            
             $a = 1;
+            $c = 5;
+
+            //$user = Auth::user();
+            //$attendances = attendances::all();
+
+            //$val = rests::with('attendances')->where('id', $id)->first();
+
+            //$val = rests::with('attendances')->where('id')->first();
+            //$val = rests::with('attendances')->first();
+            //$val = rests::with('attendances')->latest()->first();
+            $val = attendances::with('attendances')->latest()->first();
+            $bil = $val->id;
+            
+            
+            
+            
+            //$this->validate($request, rests::$rules);
+            //$form = $request->all();
+            //$id = $form->id;
+            $kari = 1;
+
+
+   
+         $timestamp = rests::create([
+        //'attendanses_id' => $user->id,//Auth::id(),
+        //'attendanses_id' => $attendances->id,//Auth::id(),
+        //'attendanses_id' => $val,//Auth::id(),
+
+        //'attendanses_id' => $id,//Auth::id(),
+        //'attendances_id' => $kari,//Auth::id(),
+        //'attendances_id' => $kari,//Auth::id(),
+        'attendances_id' => $bil,//Auth::id(),
+
+        
+        //'attendanses_id' => $form->id,//Auth::id(),
+        //'today' => Carbon::today(),
+        //'day' => Carbon::today(),
+        'start_time' => Carbon::now(),
+        //'start_time' => null,
+        //'end_time' => Carbon::now(),
+        'end_time' => null,
+        'created_at' => Carbon::now(),
+        'updated_at' => Carbon::now()
+
+        ]);
 
            // return view('index3')->with('a', $a);
-            return view('indexend')->with('a', $a);
+            return view('indexend')->with('a', $a)->with('c', $c)->with('bil', $bil)->with('val', $val);
 
 
       //$message = 'ボタン1が押されました';
         } elseif ($request->has('button4')) {
         $a = 2;
-        // return view('index3')->with('a', $a);
-         return view('indexend')->with('a', $a);
-        }else {
-        return view('thanks');
+        $c = 1;
+
+            //$user = Auth::user();
+            //$attendances = attendances::all();
+
+            //$val = rests::with('attendances')->where('id', $id)->first();
+
+            //$val = rests::with('attendances')->where('id')->first();
+            //$val = rests::with('attendances')->first();
+            //$val = rests::with('attendances')->latest()->first();
+            $val = attendances::with('attendances')->latest()->first();
+            $bil = $val->id;
+            
+            
+            
+            
+            //$this->validate($request, rests::$rules);
+            //$form = $request->all();
+            //$id = $form->id;
+            $kari = 1;
+
+
+   
+         $timestamp = rests::create([
+        //'attendanses_id' => $user->id,//Auth::id(),
+        //'attendanses_id' => $attendances->id,//Auth::id(),
+        //'attendanses_id' => $val,//Auth::id(),
+
+        //'attendanses_id' => $id,//Auth::id(),
+        //'attendances_id' => $kari,//Auth::id(),
+        //'attendances_id' => $kari,//Auth::id(),
+        'attendances_id' => $bil,//Auth::id(),
+
+        
+        //'attendanses_id' => $form->id,//Auth::id(),
+        //'today' => Carbon::today(),
+        //'day' => Carbon::today(),
+        //'start_time' => Carbon::now(),
+        'start_time' => null,
+        'end_time' => Carbon::now(),
+        //'end_time' => null,
+        'created_at' => Carbon::now(),
+        'updated_at' => Carbon::now()
+
+        ]);
+
+           // return view('index3')->with('a', $a);
+            return view('indexend')->with('a', $a)->with('c', $c)->with('bil', $bil)->with('val', $val);
       //$message = 'ボタンは押されませんでした';
         }
     }

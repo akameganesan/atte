@@ -24,5 +24,6 @@ class attendances extends Model
        public function attendances()
     {
         return $this->hasMany(rests::class);
+        //return $this->belongsTo(rests::class);
     }
 }

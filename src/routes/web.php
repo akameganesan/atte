@@ -40,10 +40,19 @@ Route::get('/', [AuthController::class, 'index']);
 //Route::post('/attendance', [AttendanceController::class, 'index1']);
 //Route::post('/attendance/end', [AttendanceController::class, 'index1']);
 
+Route::get('/attendance/index2', [AttendanceController::class, 'index2']);
 Route::post('/attendance/index2', [AttendanceController::class, 'index2']);
+
+Route::get('/attendance/start', [AttendanceController::class, 'indexstart']);
 Route::post('/attendance/start', [AttendanceController::class, 'indexstart']);
+
+Route::get('/attendance/end', [AttendanceController::class, 'indexend']);
 Route::post('/attendance/end', [AttendanceController::class, 'indexend']);
+
+Route::get('/attendance/rest', [AttendanceController::class, 'indexend']);
 Route::post('/attendance/rest', [AttendanceController::class, 'indexend']);
+
+Route::get('/index2', [AttendanceController::class, 'index2']);
 Route::post('/index2', [AttendanceController::class, 'index2']);
 
 
