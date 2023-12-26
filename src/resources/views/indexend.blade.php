@@ -10,19 +10,9 @@
       <p class="p__mini-size">{{$c}}</p>
       
 <?php
-
-
           //
           $b = $a;
           $d = $c;
-
-          //echo $b;
-          //echo $b;
-          //echo $b;
-          //echo $b;
-          //echo $b;
-          //echo $b;
-         //echo $b;
 
 ?>
 

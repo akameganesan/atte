@@ -9,16 +9,8 @@
       <p class="p__mini-size">{{$a}}</p>
 <?php
 
-
           //
           $b = $a;
-          //echo $b;
-          //echo $b;
-          //echo $b;
-          //echo $b;
-          //echo $b;
-          //echo $b;
-         //echo $b;
 
 ?>
 

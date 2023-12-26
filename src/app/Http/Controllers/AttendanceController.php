@@ -93,45 +93,8 @@ class AttendanceController extends Controller
 
     }
 
-     public function indexend(Request $request){
-            //   public function index1(){
-        
-        //$work = attencances::all();
-        //return view('index', compact('work'));
-        //$posts = $request->has('b');
-        //$b = $posts['b'];
-
-
-        /*if($request->has('b')){
-            if ($request->has('button2')) {
-
-            return view('index');
-
-            }elseif ($request->has('button3')) {
-            $a = 1;
-
-           // return view('index3')->with('a', $a);
-            return view('indexend')->with('a', $a);
-
-
-      //$message = 'ボタン1が押されました';
-            } 
-            elseif ($request->has('button4')) {
-        $a = 2;
-        // return view('index3')->with('a', $a);
-         return view('indexend')->with('a', $a);
-        }
-
-
-            }else{
-                 return view('thanks');
-            }*/
-
-
-            
-
-
-
+     public function indexend(Request $request){      
+       
             if ($request->has('button2')) {
 
             $user = Auth::user();
