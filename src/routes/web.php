@@ -24,6 +24,7 @@ Route::get('/', function () {
 
 
 Route::get('/', [AuthController::class, 'index']);
+Route::post('/', [AuthController::class, 'index']);
  
 
 
@@ -55,5 +56,13 @@ Route::post('/attendance/rest', [AttendanceController::class, 'indexend']);
 Route::get('/index2', [AttendanceController::class, 'index2']);
 Route::post('/index2', [AttendanceController::class, 'index2']);
 
+Route::get('/list', [AttendanceController::class, 'recode']);
+Route::post('/list', [AttendanceController::class, 'recode']);
+
+Route::get('/register', [UsersController::class, 'create']);
+Route::post('/register', [UsersController::class, 'register']);
+
 
 Route::get('/login', [AuthController::class, 'login']);
+
+Route::post('/logout', [AuthController::class, 'login']);

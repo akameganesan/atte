@@ -151,32 +151,10 @@
 }
 
 .nav__nav {
-
-    /*margin-right: auto;*/
-
-    /*margin-right: 60%;*/
-
-
-    /*margin-right: 500px;*/
-
-    /*margin-left: 400px;*/
-    /*margin-left: 40%;*/
-    /*margin-left: 10%;*/
-
-    /*margin-right: 90%;*/
-    margin-left: 1000px;
-
-
-
-
-
-    /*display: flex;*/
-
-
-
-    height: 60px;
-    align-items: center;
+    margin-left: 70%
 }
+
+
 
 
 
@@ -193,6 +171,7 @@
 
     align-items: center;
     margin-top: 30px;
+    width: 600px;
 
 }
 
@@ -200,6 +179,8 @@
     /*margin-right: 30px;*/
 
     /*margin-right: 60px;*/
+
+    width: 30%;
 
 
     padding: 30px;
@@ -226,5 +207,12 @@
     /*margin-left: 500px;*/
 
     /*margin-left: 100px;*/
+
+}
+
+
+.logout__nowrap {
+
+    white-space: nowrap;
 
 }

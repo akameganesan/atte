@@ -7,25 +7,6 @@
 @section('content')
 
 
-
-
-
-<?php
-
-$user = Auth::user();
-          //
-          $b = Auth::id();
-          //echo $b;
-          //echo $b;
-          //echo $b;
-          //echo $b;
-          //echo $b;
-          //echo $b;
-         //echo $b;
-
-?>
-
-
 <div class="contact-form__content">
   <div class="contact-form__heading">
     <h2><?php $user = Auth::user();?>{{ $user->name }}さんお疲れ様です！</h2>
@@ -49,7 +30,7 @@ $user = Auth::user();
 
       </div>
     </div>
-    <!--<?php $user = Auth::user();?>-->
+
    
   </form>
 

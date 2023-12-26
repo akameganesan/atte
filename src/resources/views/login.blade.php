@@ -95,10 +95,7 @@
     </div>
   </div>-->
 
-  @if (Auth::check())
-    <p>成功</p>
-  @endif
-
+ 
 
 
 </div>

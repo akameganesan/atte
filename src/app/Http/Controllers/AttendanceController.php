@@ -193,6 +193,7 @@ class AttendanceController extends Controller
             $kari = 1;
 
 
+
    
          $timestamp = rests::create([
         //'attendanses_id' => $user->id,//Auth::id(),
@@ -218,7 +219,8 @@ class AttendanceController extends Controller
         ]);
 
            // return view('index3')->with('a', $a);
-            return view('indexend')->with('a', $a)->with('c', $c)->with('bil', $bil)->with('val', $val);
+            
+             return view('indexend')->with('a', $a)->with('c', $c)->with('bil', $bil)->with('val', $val);
       //$message = 'ボタンは押されませんでした';
         }
     }
@@ -334,7 +336,17 @@ class AttendanceController extends Controller
 
     public function recode()
     {
-        return view('recode');
+        //$val = attendances::with('attendances')->get();
+            
+
+            //return view('recode',compact('val'));
+            //return view('thanks');
+
+             $attendances = attendances::all();
+
+            //return view('recode',['attendances'=> $attendances]);
+            return view('recode',compact('attendances'));
+    
     }
 
     public function thanks()
