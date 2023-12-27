@@ -17,6 +17,17 @@ class rests extends Model
     public function attendances()
     {
         return $this->belongsTo(attendances::class);
+        //return $this->hasMany(attendnces::class);
+    }
+
+    protected $guarded = array('id');
+    public static $rules = array(
+        'attendances_id' => 'required',
+        //'title' => 'required',
+    );
+
+    public function getTitle(){
+        return 'ID'.$this->id . ':' . $this->title;
     }
 
 

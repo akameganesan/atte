@@ -13,17 +13,17 @@ class attendances extends Model
          'users_id',
          'day',
          'start_time',
-         'end_
-         time'
+         'end_time'
         ];
 
            public function users()
     {
-        return $this->belongsTo(users::class);
+        return $this->belongsTo(User::class);
     }
 
        public function attendances()
     {
         return $this->hasMany(rests::class);
+        //return $this->belongsTo(rests::class);
     }
 }
