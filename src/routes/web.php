@@ -67,3 +67,6 @@ Route::post('/list', [AttendanceController::class, 'recode']);
 //Route::get('/login', [AuthController::class, 'login']);
 
 //Route::post('/logout', [AuthController::class, 'login']);
+
+
+Route::get('/thanks', [AttendanceController::class, 'thanks']);

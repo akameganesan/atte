@@ -13,10 +13,11 @@
   <div class="confirm__content">
     <div class="confirm__heading">
           <!--<h2>お問い合わせ内容確認</h2>-->
-      <div> <input type="date" name="birthday"></div>
+      <!--<div> <input type="date" name="workday"></div>-->
       </div>  
         <form class="form" action="/list" method="post">
           @csrf
+          <div> <input type="date" name="workday"></div>
           <div class="confirm-table">
             <div class="table__line">
               <table class="confirm-table__inner">
@@ -28,6 +29,7 @@
                 <th class="table__line">休憩時間</th>
                 <th class="table__line">勤務時間</th>
                 </tr>
+              
 
                 @foreach ($attendances as $attendance)
                 <tr>
@@ -40,11 +42,17 @@
                 @endforeach
 
               </table>
+              
+              {{ $attendances->onEachSide(20)->links() }}
 
             </div>
           </div>
 
         </form>
+ @foreach ($workday as $work)              
+<p>{{ $work }}</p>
+@endforeach
+
       </div>
   </div>
 </div>

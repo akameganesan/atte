@@ -9,6 +9,9 @@ use App\Models\users;
 use App\Models\User;
 use Carbon\Carbon;
 use App\Models\rests;
+use DateTime;
+use DateInterval;
+use DatePeriod;
 
 
 class AttendanceController extends Controller
@@ -334,24 +337,46 @@ class AttendanceController extends Controller
         return view('register');
     }
 
-    public function recode()
+    public function recode(Request $request)
     {
         //$val = attendances::with('attendances')->get();
             
+            //$workday = $request;
+            //$workday = Carbon::today();
+
+
+
+            //$request = 2023-12-27 00:00:00;
+            //$date = new DateTime('1999-11-02 05:27:42');
+            $date = new DateTime('2023-12-27 00:00:00');
+
+            //$items = attendances::where('day', 'workday')->get();
+            //$item = Attendances::where('day', $request->input)->first();
+            //$item = Attendances::where('day', $date)->first();
 
             //return view('recode',compact('val'));
             //return view('thanks');
 
-             $attendances = attendances::all();
+
+             //$attendances = attendances::all();
+             //$attendances = attendances::simplePaginate(5);
+             $attendances = attendances::Paginate(5);
+
+             //$workday = attendances::where('day', $date)->first();
+             $workday = attendances::where('day', $date)->get();
+
+
+
 
             //return view('recode',['attendances'=> $attendances]);
-            return view('recode',compact('attendances'));
+            return view('recode',compact('attendances','workday'));
     
     }
 
     public function thanks()
     {
-        
+        //$authors = attendances::simplePaginate(5);
+        //return view('thanks',['authors' => $authors]);
         return view('thanks');
     }
 
