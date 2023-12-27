@@ -11,48 +11,17 @@
   @yield('css')
 </head>
 
-
-
-
-
-
 <body>
-  <header clarss="headr__flex">
-        <div class="header-page">
-            <div class="header-page__size">
-                <div class="header__logo">
-                    <h2 class="h2__move">Atte</h2>
-                </div>
-                <div class="header-content__size">
-                    <div class="header__between">
-                        <nav class="nav__nav">
-                            <ul class="ul__ul">
-                                <!--<li class="li__li"><a class="a__under" href="リンク先パス">News</a></li>
-                                <li class="li__li"><a class="a__under" href="リンク先パス">about</a></li>
-                                <li class="li__li"><a class="a__under" href="リンク先パス">Service</a></li>
-                                <li class="li__li"><a class="a__under" href="リンク先パス">Blog</a></li>
-                                <li class="li__li"><a class="a__under" href="リンク先パス">comoany</a></li>
-                                <li class="li__li"><a class="a__under" href="リンク先パス">Content</a></li>-->
-                                            @if (Auth::check())
-                                <li class="li__li"><a class="a__under" href="/">ホーム</a></li>
-                                <li class="li__li"><a class="a__under" href="/recode">日付一覧</a></li>
-                              <form class="form" action="/logout" method="post">
-     @csrf
-                                <!--<li class="li__li"><a class="a__under" href="/logout">ログアウト</a></li>-->
-                                 <button class="header-nav__button">ログアウト</button>
-                                </form>
-                                            @endif
-                                <!--<li class="li__li"><a class="a__under" href="リンク先パス">Service</a></li>
-                                <li class="li__li"><a class="a__under" href="リンク先パス">Blog</a></li>
-                                <li class="li__li"><a class="a__under" href="リンク先パス">comoany</a></li>
-                                <li class="li__li"><a class="a__under" href="リンク先パス">Content</a></li>-->
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="/">
+        Atte
+      </a>
+    </div>
+      <!--@if (Auth::check())
+    <p>成功</p>
+  @endif-->
+  </header>
 
 
 
@@ -60,6 +29,5 @@
     @yield('content')
   </main>
 </body>
-
 
 </html>
