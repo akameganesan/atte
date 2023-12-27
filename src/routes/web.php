@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,14 +24,14 @@ Route::get('/', function () {
 
 
 
-Route::get('/', [AuthController::class, 'index']);
-Route::post('/', [AuthController::class, 'index']);
+//Route::get('/', [AuthController::class, 'index']);
+//Route::post('/', [AuthController::class, 'index']);
  
 
 
-//Route::middleware('auth')->group(function () {
-//     Route::get('/', [AuthController::class, 'index']);
-// });
+Route::middleware('auth')->group(function () {
+     Route::get('/', [AuthController::class, 'index']);
+ });
 
 
 
@@ -59,10 +60,10 @@ Route::post('/index2', [AttendanceController::class, 'index2']);
 Route::get('/list', [AttendanceController::class, 'recode']);
 Route::post('/list', [AttendanceController::class, 'recode']);
 
-Route::get('/register', [UsersController::class, 'create']);
-Route::post('/register', [UsersController::class, 'register']);
+//Route::get('/register', [UsersController::class, 'create']);
+//Route::post('/register', [UsersController::class, 'register']);
 
 
-Route::get('/login', [AuthController::class, 'login']);
+//Route::get('/login', [AuthController::class, 'login']);
 
-Route::post('/logout', [AuthController::class, 'login']);
+//Route::post('/logout', [AuthController::class, 'login']);

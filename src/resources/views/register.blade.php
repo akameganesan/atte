@@ -78,17 +78,7 @@
   <div class="form">
     <a class="a__under" href="http://localhost/login">ログイン</a>
   </div>
-@php
-    $v1 = 'value';
-    $v2 = 'value2';
-    $v1 == $v2;
-    $a = 5;
-    if ($a === 5) {
-    echo "\$aは5です";
-    }else{
-    echo "\$aは5以外です";
-    }
-@endphp
+
 </div>
 <div class="news">
   <div class="resize">
