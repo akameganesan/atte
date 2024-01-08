@@ -37,7 +37,7 @@
                                 <!--<li class="li__li"><a class="a__under" href="/">ホーム</a></li>-->
                                 <!--<li class="li__li"><a class="a__under" href="/recode">日付一覧</a></li>-->
 
-                                <form class="form" action="/" method="post">
+                                <form class="form" action="/" method="post" >
                                        @csrf
                                 <!--<li class="li__li"><a class="a__under" href="/logout">ログアウト</a></li>-->
                                  <button class="header-nav__button">ホーム</button>
@@ -51,7 +51,7 @@
 
 
 
-                                <form class="form" action="/list" method="post">
+                                <form class="form" type="text" name="page" action="/list" method="post" value="5">
                                        @csrf
                                 <!--<li class="li__li"><a class="a__under" href="/logout">ログアウト</a></li>-->
                                  <button class="header-nav__button">日付一覧</button>

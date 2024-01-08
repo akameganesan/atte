@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\attendances;
+use App\Models\Attendance;
 
 class attendances extends Model
 {
@@ -23,7 +23,15 @@ class attendances extends Model
 
        public function attendances()
     {
-        return $this->hasMany(rests::class);
+        return $this->hasMany(Rest::class);
         //return $this->belongsTo(rests::class);
     }
+
+    public function getUserNameById()
+  {
+    return attendances::join('users', 'attendances.users_id', 'users.id')->get();
+            //->join('users', 'posts.user_id', '=', 'users.id')
+            //->get();
+            //->join('users', 'attendances.users_id', 'users.id')->get();
+  }
 }
