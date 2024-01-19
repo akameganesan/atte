@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\users;
 use App\Http\Requests\UserRequest;
+use App\Models\attendances;
 
 class UsersController extends Controller
 {

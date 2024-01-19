@@ -177,3 +177,17 @@
 
 
 }
+
+
+
+.day__style{
+
+    input[type="time"] {
+            clip-path: inset(0 25px 0 0);
+            border: none;
+            outline: none;
+            outline: 0;
+        }
+
+
+}
