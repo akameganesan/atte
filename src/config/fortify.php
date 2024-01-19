@@ -46,10 +46,27 @@ return [
     |
     */
 
-    'username' => 'email',
+
+
+
+
+    /*ここを変えた*/
+    /*'username' => 'email',*/
+    /*'username' => 'userid',*/
+
+    'username' => 'name',
 
     'email' => 'email',
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /*
     |--------------------------------------------------------------------------
     | Lowercase Usernames
