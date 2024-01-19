@@ -9,24 +9,39 @@
 <div class="form">
   <div class="contact-form__content">
     <div class="contact-form__heading">
-     <h2>登録完了</h2>
-   </div>
+      <h2>登録完了</h2>
+    </div>
 
-  <div class="form">
-    <a class="a__under" href="http://localhost/attendance">メインページへ</a>
+    <div class="form">
+      <a class="a__under" href="http://localhost/attendance">メインページへ</a>
+    </div>
   </div>
-</div>
- @if (Auth::check())
-    <p>成功</p>
- @endif
-@if (Auth::check())
-<div class="thanks__content">
-  <div class="thanks__heading">
-    <h2>ログイン成功</h2>
+  @if (Auth::check())
+  <p>成功</p>
+  @endif
+  @if (Auth::check())
+  <div class="thanks__content">
+    <div class="thanks__heading">
+      <h2>ログイン成功</h2>
+    </div>
   </div>
-</div>
-@else
-<!--<p>ログインできていません</p>-->
-@endif
-<!--<p>ログインできていません</p>-->
-@endsection
+  @else
+  <!--<p>ログインできていません</p>-->
+  @endif
+  <!--<p>ログインできていません</p>-->
+  @php
+
+  //$zx1 = $output1;
+  //$zx2 = $output12;
+
+  @endphp
+
+  {{ $output1 }}
+  {{ $output2 }}
+  {{ $output3 }}
+  {{ $dt }}
+
+
+
+
+  @endsection

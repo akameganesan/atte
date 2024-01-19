@@ -18,14 +18,14 @@
         <span class="form__label--required">必須</span>-->
       </div>
       <!--<div class="form__group-content">-->
-        <div class="form__input--text">
-          <input type="email" name="email" placeholder="メールアドレス" value="{{ old('email') }}" />
-        </div>
-        <div class="form__error">
-          @error('email')
-          {{ $message }}
-          @enderror
-        </div>
+      <div class="form__input--text">
+        <input type="email" name="email" placeholder="メールアドレス" value="{{ old('email') }}" />
+      </div>
+      <div class="form__error">
+        @error('email')
+        {{ $message }}
+        @enderror
+      </div>
       <!--</div>-->
     </div>
     <div class="form__group">
@@ -34,14 +34,14 @@
         <span class="form__label--required">必須</span>-->
       </div>
       <!--<div class="form__group-content">-->
-        <div class="form__input--text">
-          <input type="password" name="password" placeholder="パスワード" value="{{ old('pass') }}" />
-        </div>
-        <div class="form__error">
-          @error('password')
-          {{ $message }}
-          @enderror
-        </div>
+      <div class="form__input--text">
+        <input type="password" name="password" placeholder="パスワード" value="{{ old('pass') }}" />
+      </div>
+      <div class="form__error">
+        @error('password')
+        {{ $message }}
+        @enderror
+      </div>
       <!--</div>-->
     </div>
     <!--<div class="form__group">
@@ -69,11 +69,11 @@
           <textarea name="content" placeholder="資料をいただきたいです">{{ old('content') }}</textarea>
         </div>
       </div>
-    </div>--> 
-        
+    </div>-->
+
     <div class="form__button">
 
-        <button class="form__button-submit" type="submit">ログイン</button>
+      <button class="form__button-submit" type="submit">ログイン</button>
 
     </div>
   </form>
@@ -95,7 +95,7 @@
     </div>
   </div>-->
 
- 
+
 
 
 </div>
@@ -103,10 +103,10 @@
 <div class="news">
   <div class="resize">
     <div class="news-page__size">
-        <div class="news__absolute">
-         <!--<p class="p-news__style">news</p>-->
-         <h4 class="h3_news__margin">Atte,inc.</h4>                    
-        </div>
+      <div class="news__absolute">
+        <!--<p class="p-news__style">news</p>-->
+        <h4 class="h3_news__margin">Atte,inc.</h4>
+      </div>
     </div>
   </div>
 </div>

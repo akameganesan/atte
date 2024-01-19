@@ -14,22 +14,22 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        
-         $param = [
+
+        $param = [
             'name' => '佐藤',
             'email' => 'test@yahoo.co.jp',
             'password' => '123456789'
         ];
         DB::table('users')->insert($param);
 
-         $param = [
+        $param = [
             'name' => '鈴木',
             'email' => 'test1@yahoo.co.jp',
             'password' => '1234567890'
         ];
         DB::table('users')->insert($param);
 
-         $param = [
+        $param = [
             'name' => '伊藤',
             'email' => 'test2@yahoo.co.jp',
             'password' => '12345678901'
@@ -43,7 +43,7 @@ class UsersTableSeeder extends Seeder
         ];
         DB::table('users')->insert($param);
 
-         $param = [
+        $param = [
             'name' => '加藤',
             'email' => 'test4@yahoo.co.jp',
             'password' => '1234567890123'
