@@ -15,11 +15,11 @@ class AttendancesTableSeeder extends Seeder
     public function run()
     {
         //
-         $param = [
+        $param = [
             'users_id' => 1,
             'day' => 20231208,
             //'start_time' => 8.00,
-             //'end_time' => 18.00
+            //'end_time' => 18.00
             //'start_time' => 28800,
             //'end_time' => 64800
             'start_time' => 80000,
@@ -28,7 +28,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 2,
             'day' => 20231208,
             //'start_time' => 9.00,
@@ -42,7 +42,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 3,
             'day' => 20231208,
             //'start_time' => 8.30,
@@ -70,7 +70,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 5,
             'day' => 20231208,
             //'start_time' => 8.30,
@@ -84,11 +84,11 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 1,
             'day' => 20231209,
             //'start_time' => 8.00,
-             //'end_time' => 18.00
+            //'end_time' => 18.00
             //'start_time' => 28800,
             //'end_time' => 64800
             'start_time' => 80000,
@@ -97,7 +97,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 2,
             'day' => 20231209,
             //'start_time' => 9.00,
@@ -111,7 +111,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 3,
             'day' => 20231209,
             //'start_time' => 8.30,
@@ -139,7 +139,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 5,
             'day' => 20231209,
             //'start_time' => 8.30,
@@ -153,11 +153,11 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 1,
             'day' => 20231210,
             //'start_time' => 8.00,
-             //'end_time' => 18.00
+            //'end_time' => 18.00
             //'start_time' => 28800,
             //'end_time' => 64800
             'start_time' => 80000,
@@ -166,7 +166,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 2,
             'day' => 20231210,
             //'start_time' => 9.00,
@@ -180,7 +180,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 3,
             'day' => 20231210,
             //'start_time' => 8.30,
@@ -208,7 +208,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 5,
             'day' => 20231210,
             //'start_time' => 8.30,
@@ -226,7 +226,7 @@ class AttendancesTableSeeder extends Seeder
             'users_id' => 1,
             'day' => 20231211,
             //'start_time' => 8.00,
-             //'end_time' => 18.00
+            //'end_time' => 18.00
             //'start_time' => 28800,
             //'end_time' => 64800
             'start_time' => 80000,
@@ -235,7 +235,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 2,
             'day' => 20231211,
             //'start_time' => 9.00,
@@ -249,7 +249,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 3,
             'day' => 20231211,
             //'start_time' => 8.30,
@@ -277,7 +277,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 5,
             'day' => 20231211,
             //'start_time' => 8.30,
@@ -295,7 +295,7 @@ class AttendancesTableSeeder extends Seeder
             'users_id' => 1,
             'day' => 20231212,
             //'start_time' => 8.00,
-             //'end_time' => 18.00
+            //'end_time' => 18.00
             //'start_time' => 28800,
             //'end_time' => 64800
             'start_time' => 80000,
@@ -304,7 +304,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 2,
             'day' => 20231212,
             //'start_time' => 9.00,
@@ -318,7 +318,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 3,
             'day' => 20231212,
             //'start_time' => 8.30,
@@ -346,7 +346,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 5,
             'day' => 20231212,
             //'start_time' => 8.30,
@@ -364,7 +364,7 @@ class AttendancesTableSeeder extends Seeder
             'users_id' => 1,
             'day' => 20231212,
             //'start_time' => 8.00,
-             //'end_time' => 18.00
+            //'end_time' => 18.00
             //'start_time' => 28800,
             //'end_time' => 64800
             'start_time' => 80000,
@@ -373,7 +373,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 2,
             'day' => 20231213,
             //'start_time' => 9.00,
@@ -387,7 +387,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 3,
             'day' => 20231213,
             //'start_time' => 8.30,
@@ -415,7 +415,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 5,
             'day' => 20231213,
             //'start_time' => 8.30,
@@ -433,7 +433,7 @@ class AttendancesTableSeeder extends Seeder
             'users_id' => 1,
             'day' => 20231214,
             //'start_time' => 8.00,
-             //'end_time' => 18.00
+            //'end_time' => 18.00
             //'start_time' => 28800,
             //'end_time' => 64800
             'start_time' => 80000,
@@ -442,7 +442,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 2,
             'day' => 20231214,
             //'start_time' => 9.00,
@@ -456,7 +456,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 3,
             'day' => 20231214,
             //'start_time' => 8.30,
@@ -484,7 +484,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 5,
             'day' => 20231214,
             //'start_time' => 8.30,
@@ -502,7 +502,7 @@ class AttendancesTableSeeder extends Seeder
             'users_id' => 1,
             'day' => 20231215,
             //'start_time' => 8.00,
-             //'end_time' => 18.00
+            //'end_time' => 18.00
             //'start_time' => 28800,
             //'end_time' => 64800
             'start_time' => 80000,
@@ -511,7 +511,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 2,
             'day' => 20231215,
             //'start_time' => 9.00,
@@ -525,7 +525,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 3,
             'day' => 20231215,
             //'start_time' => 8.30,
@@ -553,7 +553,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 5,
             'day' => 20231215,
             //'start_time' => 8.30,
@@ -594,7 +594,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-       
+
         $param = [
             'users_id' => 1,
             'day' => 20231217,
@@ -690,7 +690,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 10,
             'day' => 20231217,
             //'start_time' => 8.30,
@@ -745,7 +745,7 @@ class AttendancesTableSeeder extends Seeder
             'end_time' => 182000
         ];
         DB::table('attendances')->insert($param);
-        
+
         $param = [
             'users_id' => 14,
             'day' => 20231217,
@@ -984,7 +984,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 31,
             'day' => 20231217,
             //'start_time' => 8.30,
@@ -1541,7 +1541,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 10,
             'day' => 20231218,
             //'start_time' => 8.30,
@@ -1596,7 +1596,7 @@ class AttendancesTableSeeder extends Seeder
             'end_time' => 182000
         ];
         DB::table('attendances')->insert($param);
-        
+
         $param = [
             'users_id' => 14,
             'day' => 20231218,
@@ -1835,7 +1835,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 31,
             'day' => 20231218,
             //'start_time' => 8.30,
@@ -2392,7 +2392,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 10,
             'day' => 20231219,
             //'start_time' => 8.30,
@@ -2447,7 +2447,7 @@ class AttendancesTableSeeder extends Seeder
             'end_time' => 182000
         ];
         DB::table('attendances')->insert($param);
-        
+
         $param = [
             'users_id' => 14,
             'day' => 20231219,
@@ -2686,7 +2686,7 @@ class AttendancesTableSeeder extends Seeder
         ];
         DB::table('attendances')->insert($param);
 
-         $param = [
+        $param = [
             'users_id' => 31,
             'day' => 20231219,
             //'start_time' => 8.30,

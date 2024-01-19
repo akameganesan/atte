@@ -12,464 +12,478 @@
 <diV class="contact-form__content">
   <div class="confirm__content">
     <div class="confirm__heading">
-          <!--<h2>お問い合わせ内容確認</h2>-->
+      <!--<h2>お問い合わせ内容確認</h2>-->
       <!--<div> <input type="date" name="workday"></div>-->
       <!--<div> <input type="date" name="wkday"></div>-->
-      </div>  
-        <form class="form" action="/list" method="post">
-        <!--<form class="form" action="/list" method="get">-->
-          @csrf
-           <caption>
-    <input type="submit" name="calendar[2020-09*2020-10-24]" value="<<">
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--<caption>-->
+    <!--<input type="submit" name="calendar[2020-09*2020-10-24]" value="<<">-->
     <!--2020年10月-->
-    2023年12月8日
-    <input type="submit" name="calendar[2020-11*2020-10-24]" value=">>">
-  </caption>
+    <!--2023年12月8日-->
+    <!--<input type="submit" name="calendar[2020-11*2020-10-24]" value=">>">-->
+    <!--</caption>-->
 
-        <!--<button disabled class="form__button-submit-2" type="submit">勤務終了</button>-->
-        <!--<button class="form__button-submit" type="submit">勤務終了</button>-->
-        <!--<button type="submit" name="button2" value="ボタン2" >勤務終了</button>-->
-
-
-      </div>
-      
-          <!--<div> <input type="date" name="wkday"></div>-->
-          <div class="confirm-table">
-            <div class="table__line">
-              <table class="confirm-table__inner">
-                <tr class="confirm-table__row">
-                <tr class="confirm-table__header">
-                <th class="table__line">名前</th>
-                <th class="table__line">勤務開始</th>
-                <th class="table__line">勤務終了</th>
-                <th class="table__line">休憩時間</th>
-                <th class="table__line">勤務時間</th>
-
-                
-              
+    <!--<button disabled class="form__button-submit-2" type="submit">勤務終了</button>-->
+    <!--<button class="form__button-submit" type="submit">勤務終了</button>-->
+    <!--<button type="submit" name="button2" value="ボタン2" >勤務終了</button>-->
 
 
+  </div>
 
-                
+  <!--<div> <input type="date" name="wkday"></div>-->
+  <div class="confirm-table">
+    <div class="table__line">
+      <table class="confirm-table__inner">
+        <tr class="confirm-table__row">
+        <tr class="confirm-table__header">
+          <th class="table__line">名前</th>
+          <th class="table__line">勤務開始</th>
+          <th class="table__line">勤務終了</th>
+          <th class="table__line">休憩時間(10進法：ｈ表示)</th>
+          <th class="table__line">勤務時間(10進法：ｈ表示)</th>
 
-                </tr>
+        </tr>
 
-                
+        <?php
 
-                  <?php
-                    //
-                    //$v3 = $v2->attendances_id;
-                    //$d = $c;
-
-                    //$v3 = 1;
-                    $v3 = $v2->attendances_id;
+                     $v3 = $v2->attendances_id;
                     $v4 = $v2->attendances_id;
-
                     $sum = 0;
                     $sumDate = 1;
-                    //echo $v3;
                     $oo = 0;
-
                     $ooo = 0;
+                    $beforeDate = $v2->attendances_id;
 
-                     $beforeDate = $v2->attendances_id;
+                    $v5 = $v2->attendances_id;
 
-                     $v5 = $v2->attendances_id;
-
+   
                   ?>
 
-                  
-        
-                @foreach ($sstocks as $res)
 
-                @php
- 
-                    $v4 = $res->attendances_id;
+        @php
+        //休憩時間の合計だけあっているver
+        @endphp
 
-                @endphp
-                 
-                    
-                      @if($v5 == $v4)
-                @php
-		              //echo $res->attendances_id;
-                  echo "v4:";
-                  echo $v4. "::";
-                  echo "v5:";
-                  echo $v5. "::";
 
 
-                  $sta_b = $res->start_time_b;
-                    $end_b = $res->end_time_b;
+        @foreach ($sstocks as $res)
 
-                    
+        @php
+        $v4 = $res->attendances_id;
+        @endphp
 
-                    $Date = date("Y-m-d");
-                    $staTime_b = $Date.$sta_b;
-                    $endTime_b = $Date.$end_b;                 
 
-                    $WorkedTime_b = (strtotime($staTime_b) - strtotime($endTime_b))/3600;
-                    $WoTime_b = number_format($WorkedTime_b, 2);
-                //380の合計
-                $ooo += $WoTime_b;
-                //$aaa = $res->atendances_id;
-                //echo $aaa;
-                  echo $ooo;
-                @endphp
+        @if($v5 == $v4)
+        @php
+        //echo $res->attendances_id;
+        //echo "vv4:";
+        //echo $v4. "::";
+        //echo "vv5:";
+        //echo $v5. "::";
 
-                    @else
+        $sta_b = $res->start_time_b;
+        $end_b = $res->end_time_b;
 
-                    
-                      @php
-                      $ooo = 0;
-                      echo $ooo;
+        $Date = date("Y-m-d");
+        $staTime_b = $Date.$sta_b;
+        $endTime_b = $Date.$end_b;
 
+        $WorkedTime_b = (strtotime($staTime_b) - strtotime($endTime_b))/3600;
+        $WoTime_b = number_format($WorkedTime_b, 2);
+        //380の合計
+        $ooo += $WoTime_b;
+        //$aaa = $res->atendances_id;
+        //echo $aaa;
+        //echo $ooo;
 
-                     
-		              //echo $res->attendances_id;
-                  echo "v4:";
-                  echo $v4. "::";
-                  echo "v5:";
-                  echo $v5. "::";
+        @endphp
 
+        @else
+        @php
+        $ooo = 0;
+        //echo $ooo;
 
-                  $sta_b = $res->start_time_b;
-                    $end_b = $res->end_time_b;
+        //echo $res->attendances_id;
+        //echo "vv4:";
+        //echo $v4. "::";
+        //echo "vv5:";
+        //echo $v5. "::";
 
-                    
+        $sta_b = $res->start_time_b;
+        $end_b = $res->end_time_b;
 
-                    $Date = date("Y-m-d");
-                    $staTime_b = $Date.$sta_b;
-                    $endTime_b = $Date.$end_b;                 
+        $Date = date("Y-m-d");
+        $staTime_b = $Date.$sta_b;
+        $endTime_b = $Date.$end_b;
 
-                    $WorkedTime_b = (strtotime($staTime_b) - strtotime($endTime_b))/3600;
-                    $WoTime_b = number_format($WorkedTime_b, 2);
-                //380の合計
-                $ooo += $WoTime_b;
-                //$aaa = $res->atendances_id;
-                //echo $aaa;
-                echo $ooo;
-                      @endphp
-                @endif
+        $WorkedTime_b = (strtotime($staTime_b) - strtotime($endTime_b))/3600;
+        $WoTime_b = number_format($WorkedTime_b, 2);
+        //380の合計
+        $ooo += $WoTime_b;
+        //$aaa = $res->atendances_id;
+        //echo $aaa;
+        //echo $ooo;
+        @endphp
 
-                  @php
-                    $v4 = $res->attendances_id;
-                    $v5 = $v4;
-                    $v6 = $v5 + 1;
-                  @endphp
-                
-                @endforeach
 
-               
-               
+        @endif
 
-        
-                
+        @php
+        $v4 = $res->attendances_id;
+        $v5 = $v4;
+        $v6 = $v5 + 1;
+        @endphp
 
+        @endforeach
 
+        @php
+        //休憩時間の合計だけあっているver
+        @endphp
 
 
 
 
 
 
-                <!--このifの条件だと2回入ってしまう-->
-                @foreach ($sstocks as $res)
 
 
-                @if($res->attendances_id == 380)
 
-                <p>３８０に入っている</p>
 
-                  @php
-                    $sta_b = $res->start_time_b;
-                    $end_b = $res->end_time_b;
 
-                    
 
-                    $Date = date("Y-m-d");
-                    $staTime_b = $Date.$sta_b;
-                    $endTime_b = $Date.$end_b;                 
 
-                    $WorkedTime_b = (strtotime($staTime_b) - strtotime($endTime_b))/3600;
-                    $WoTime_b = number_format($WorkedTime_b, 2);
-                //380の合計
-                $oo += $WoTime_b;
-                echo "380の合計";
-                echo $oo;
-                @endphp
-                @endif
+        @php
+        //休憩時間の合計だけあっているverを編集
 
+        @endphp
 
 
 
 
-                @if($v3 == $res->attendances_id)
+        @php
 
-                  <p>入っている</p>
-                  <p>{{ $res->attendances_id }}</p>
-                  <p>{{$res->name}}</p>      
+        //
+        //$v3 = $v2->attendances_id;
+        //$d = $c;
 
+        //$v3 = 1;
+        $v3 = $v2->attendances_id;
+        $v4 = $v2->attendances_id;
+        $vvvvv = $v2->day;
+        //echo $vvvvv;
+        $sum = 0;
+        $sumDate = 1;
+        //echo $v3;
+        $oo = 0;
 
+        $ooo = 0;
 
+        $beforeDate = $v2->attendances_id;
 
+        $v5 = $v2->attendances_id;
 
+        $tag = $v2->attendances_id + 1;
+        $ta = $v2->attendances_id + 1;
 
+        $count = 1;
+        $cou = 1;
 
-                @endif
-                
-                
+        $v2AB = $v2ab;
+        $V2AB = $v2->attendances_id + $v2AB;
 
-               
 
-                @if($v3 == $res->attendances_id)
-                @php
-                  $sta_b = $res->start_time_b;
-                    $end_b = $res->end_time_b;
 
-                    
+        //$v2AB = $vl2->attendances_id;
 
-                    $Date = date("Y-m-d");
-                    $staTime_b = $Date.$sta_b;
-                    $endTime_b = $Date.$end_b;                 
+        @endphp
 
-                    $WorkedTime_b = (strtotime($staTime_b) - strtotime($endTime_b))/3600;
-                    $WoTime_b = number_format($WorkedTime_b, 2);
-                //380の合計
-                $ooo += $WoTime_b;
-                $aaa = $res->atendances_id;
-                echo $aaa;
-                echo "のチャージ中..............";
-                echo "休憩時間チャージ中";
-                echo $ooo;
+        @php
+        //休憩時間の合計だけあっているverを編集
 
-                $v3 = $res->attendances_id;
-                @endphp
-               
+        @endphp
 
-                
-               
-                
-                  <!--ここにifがあった-->
-                  
 
-                <!--ここまでifがあった-->
-                @else
 
-                @php
 
 
+        @foreach ($sstocks as $res)
 
-                 $sta = $res->start_time;
-                   $end = $res->end_time;
+        @php
+        $v4 = $res->attendances_id;
+        @endphp
 
-                   $Date = date("Y-m-d");
-                    $staTime = $Date.$sta;
-                    $endTime = $Date.$end;
 
-                    $WorkedTime = (strtotime($staTime) - strtotime($endTime))/3600;
-                    $WoTime = number_format($WorkedTime, 2);
+        @if($v5 == $v4)
+        @php
+        //echo $res->attendances_id;
+        //echo "vv4:";
+        //echo $v4. "::";
+        //echo "vv5:";
+        //echo $v5. "::";
 
-                    $wooo = $WoTime;
+        $sta_b = $res->start_time_b;
+        $end_b = $res->end_time_b;
 
-                    $wooo_full = $wooo - $ooo;
+        $Date = date("Y-m-d");
+        $staTime_b = $Date.$sta_b;
+        $endTime_b = $Date.$end_b;
 
+        $WorkedTime_b = (strtotime($staTime_b) - strtotime($endTime_b))/3600;
+        $WoTime_b = number_format($WorkedTime_b, 2);
+        //380の合計
+        $ooo += $WoTime_b;
+        //$aaa = $res->atendances_id;
+        //echo $aaa;
+        //echo $ooo;
+        $oooo = $ooo;
 
-                
+        @endphp
 
-                @endphp
-                 
-             
 
-                 <tr>
-                  
-                  <td class="confirm-table__text">{{$res->name}}</td>
-                 <td class="confirm-table__text">{{$res->start_time}}</td>
-                  <td class="confirm-table__text">{{$res->end_time}}</td>
-                  <td class="confirm-table__text">{{$ooo}}</td>
-                  <td class="confirm-table__text">{{$wooo_full}}</td>
-                  
-                  <td class="confirm-table__text">{{ $res->attendances_id }}</td>
-                  <td class="confirm-table__text">{{$res->day}}</td>
-                  
 
 
-                
-                  
-                  <!--ここからphpと<td>があった-->
-                   
-                  <!--ここままでphpと<td>があった-->
 
+        @else
+        @php
+        $ooo = 0;
+        //echo $ooo;
 
+        //echo $res->attendances_id;
+        //echo "vv4:";
+        //echo $v4. "::";
+        //echo "vv5:";
+        //echo $v5. "::";
 
+        $sta_b = $res->start_time_b;
+        $end_b = $res->end_time_b;
 
-                     <?php
-                  $v3 = $res->attendances_id;
-                    ?>
+        $Date = date("Y-m-d");
+        $staTime_b = $Date.$sta_b;
+        $endTime_b = $Date.$end_b;
 
+        $WorkedTime_b = (strtotime($staTime_b) - strtotime($endTime_b))/3600;
+        $WoTime_b = number_format($WorkedTime_b, 2);
+        //380の合計
+        $ooo += $WoTime_b;
+        //$aaa = $res->atendances_id;
+        //echo $aaa;
+        //echo $ooo;
+        //$oooo = $ooo;
+        @endphp
 
-                  
 
 
 
+        @endif
 
-</tr>
-               
-               
-                  @php
-                  //ifで3回目以降に挑戦
-                  $ooo = 0;
-                  @endphp
+        @php
+        $v4 = $res->attendances_id;
+        $v5 = $v4;
+        $v6 = $v5 + 1;
+        @endphp
 
+        @php
+        $sta = $res->start_time;
+        $end = $res->end_time;
 
-                 @endif
+        $Date = date("Y-m-d");
+        $staTime = $Date.$sta;
+        $endTime = $Date.$end;
 
-                  <?php
-                  //失敗
-                   //$sum = 0;
-                    ?>
+        $WorkedTime = (strtotime($staTime) - strtotime($endTime))/3600;
+        $WoTime = number_format($WorkedTime, 2);
 
-                     <?php
-                //$v3 = $res->attendances_id + 1;
-                //echo $v3;
-                $sumDate++;
+        $wooo = $WoTime;
 
-                //２回目まではこの位置でうまくいった
+        $wooo_full = $wooo - $ooo;
+        $woooo = $wooo;
+        @endphp
 
-              
 
 
-                //２回目まではこの位置でうまくいった
-                $sum = 0;
-                ?>
+        @php
+        //$ta = $v4;
+        //$tag = $v4 + 1;
 
+        //$ta = 100;
 
-                @endforeach              
-                
+        $vv4 = $v4;
+        $vvv4 = $v4 + 1;
 
-              </table>
+        //$tag = $ta + 1;
+        @endphp
 
+        @if($v4 == $tag)
 
+        @php
+        $list = $v4 - 1;
+        @endphp
 
-              
-              <!--ここにページネイトを置く-->
-              {{ $sstocks->appends(request()->query())->links() }}
-              
-            
+        @foreach ($sstocks as $re)
 
 
+        @if($re->attendances_id == $list)
 
-              </div>
-          </div>
+        <tr>
 
-        </form>
+          @php
 
-@php
-                   
+          //うまくいってたところ
+          // $total_bb = $ooo;
+          //$total_ww = $wooo_full;
 
-                  
+          //$number = explode('.', $total_bb);
+          //echo "::整数::";
+          //echo $number[0];
+          //echo "::少数::";
+          //echo $number[1];
 
-                    $Date = date("Y-m-d");
-                    $InTime = $Date." 10:00:00";
-                    $OutTime = $Date." 18:00:00";
+          //$number_tt = $number[1] * 60 / 100;
+          //echo "::分::";
+          //echo $number_tt;
+          //$number_t = sprintf('%02d', $number_tt);
 
-                    $WorkTime = (strtotime($OutTime) - strtotime($InTime))/3600;
-                    echo number_format($WorkTime, 1);
+          //echo ":時間::";
+          //echo sprintf('%02d', $number[0]);
+          //$wh = $number[0] * -1;
+          //$number_h = sprintf('%02d', $wh);
 
- @endphp
+          //$number_ss = 0;
+          // $number_s = sprintf('%02d', $number_ss);
 
 
-                {{ $v2->attendances_id }}
 
-<?php
-          //
-          $v3 = $v2->attendances_id;
-          //$d = $c;
 
-?>
 
-{{ $v3 }}
+          //合計時間
+          //$number1 = explode('.', $total_ww);
+          //$number_ww1 = $number1[1] * 60 / 100;
+          //$number_ww1_i = sprintf('%02d', $number_ww1);
+          //$wh1 = $number1[0] * -1;
+          //$number_h1 = sprintf('%02d', $wh1);
+          //$number1_ss = 0;
+          //$number1_s = sprintf('%02d', $number_ss);
 
-{{ $d }}
-{{ $stocks }}
+          //うまくいっていたところ
 
 
-{{ $rrresult }}
-{{ $rresult }}
+          $ooo_full = $ooo * -1;
+          $wooo_full_1 = $wooo_full * -1;
 
 
-@php
+          @endphp
 
+          <td class="confirm-table__text">{{$re->name}}</td>
+          <td class="confirm-table__text">{{$re->start_time}}</td>
+          <td class="confirm-table__text">{{$re->end_time}}</td>
 
+          <td class="confirm-table__text">{{$ooo_full}}</td>
+          <td class="confirm-table__text">{{$wooo_full_1}}</td>
 
-echo strtotime('2023-12-10');
-echo strtotime("tomorrow");
 
-$nday = strtotime('2023-12-15');
-$dday = strtotime('2023-12-15');
 
-if($nday == $dday)
 
-echo "どうですか";
+          <!--ここからphpと<td>があった-->
 
-@endphp
+          <!--ここままでphpと<td>があった-->
 
+        </tr>
 
-{{ $dd }}
 
 
 
+        @php
+        $woooo = 0;
+        $oooo = 0;
+        //$ooo = 0;
+        //$cou = 1;
+        @endphp
 
 
-{{ $c }}
-{{ $dt }}
 
+        @break
+        @endif
+        @php
+        //$cou = $count + 1;
+        //$count += ;
+        @endphp
+        @endforeach
+        @endif
 
-<!--現在のページに表示されている件数:-->
-{{ $sstocks->count() }}
-<!--現在のページ数:--> 
-{{ $sstocks->currentPage() }}
-<!--現在のページの最初の要素:--> 
-{{ $sstocks->firstItem() }}
-<!--次のページがあるかどうか:--> 
-{{ $sstocks->hasMorePages() }}
-<!--現在のページの最後の要素:--> 
-{{ $sstocks->lastItem() }}
-<!--最後のページ数: -->
-{{ $sstocks->lastPage() }}
-<!--次のページのURL:--> 
-{{ $sstocks->nextPageUrl() }}
-<!--1ページに表示する件数:--> 
-{{ $sstocks->perPage() }}
-<!--前のページのURL:--> 
-{{ $sstocks->previousPageUrl() }}
-<!--合計件数:--> 
-{{ $sstocks->total() }}
 
 
+        @php
+        //$ta = $res->attedances_id;
+        //$ta = 100;
 
 
 
-{{ $dddd }}
-{{ $first }}
-{{ $second }}
-{{ $user1 }}
-{{ $user2 }}
-{{ $sssss }}
-{{ $eeeee }}
+        //$tag = $v4 + 1;
+        $tag = $vv4 + 1;
+        @endphp
 
-{{ $ssssss }}
 
 
 
 
+        @endforeach
 
+        @php
+        //休憩時間の合計だけあっているverを編集
 
+        @endphp
 
+        <!--こんがらがって最悪の状況-->
+      </table>
 
- 
-      </div>
-      
+      <!--ここにページネイトを置く-->
+      <!--<form class="form" action="/list" method="post">-->
+      <!--<input type="text" name="day3" />-->
+      {{ $sstocks->appends(request()->query())->links() }}
+      <!--</form>-->
+    </div>
   </div>
+
+
+
+
+
+
+
+  <!--<form class="form" action="/list" method="post">-->
+  <form class="form" action="/list_end_1" method="post">
+    @csrf
+    <!--<input type="button" onclick="op1.value -= 1;" value="<<">-->
+    <p>{{ $dt }}</p>
+
+    <!--<button type="submit" name="day1" value="1000">>></button>-->
+    <input class="day__style" type="date" name="day3" value="2023月12月19日" size="10"><!-- ×-->
+
+    <button type="submit" name="day2" value="妥協">日付指定</button>
+
+    <!--<input type="date" name="b" value="0" size="10"> ＝-->
+    <!--<output name="op1">0</output>-->
+    <!--<input type="button" onclick="op1.value -= -1;" value=">>">-->
+    <!--<button type="submit" name="day2" value="$vvv2">>></button>-->
+    @error('day')
+    {{ $message }}
+    @enderror
+  </form>
+
+
+
+</div>
+
+</div>
 </div>
 
 @endsection

@@ -11,7 +11,7 @@
     <h2>会員登録</h2>
   </div>
   <!--<form class="form" action="contacts/confirm" method="post">-->
-    <form class="form" action="/register" method="post">
+  <form class="form" action="/register" method="post">
     @csrf
     <div class="form__group">
       <div class="form__group-content">
@@ -73,7 +73,7 @@
   <div class="form">
     <di class="under__text ">
       <p>アカウントをお持ち出ない方はこちらから</p>
-  </di>
+    </di>
   </div>
   <div class="form">
     <a class="a__under" href="http://localhost/login">ログイン</a>
@@ -83,10 +83,10 @@
 <div class="news">
   <div class="resize">
     <div class="news-page__size">
-        <div class="news__absolute">
-         <!--<p class="p-news__style">news</p>-->
-         <h4 class="h3_news__margin">Atte,inc.</h4>                    
-        </div>
+      <div class="news__absolute">
+        <!--<p class="p-news__style">news</p>-->
+        <h4 class="h3_news__margin">Atte,inc.</h4>
+      </div>
     </div>
   </div>
 </div>
